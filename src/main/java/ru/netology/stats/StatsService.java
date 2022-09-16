@@ -55,11 +55,10 @@ public class StatsService {
     // 5.Кол-во месяцев, в которых продажи были ниже среднего
     public int counterMonthSalesMin(long[] sales) {
         StatsService averag = new StatsService();
-        long arr[] = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        double average = averag.averageSumSales(arr);
+        double average = averag.averageSumSales(sales);
 
         int counter = 0;
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < sales.length; i++) {
             if (sales[i] < average) {
             counter += 1;
             }
@@ -71,11 +70,10 @@ public class StatsService {
     // 6.Кол-во месяцев, в которых продажи были выше среднего
     public int counterMonthSalesMax(long[] sales) {
         StatsService averag = new StatsService();
-        long arr[] = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        double average = averag.averageSumSales(arr);
+        double average = averag.averageSumSales(sales);
 
         int counter = 0;
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < sales.length; i++) {
             if (sales[i] > average){
                 counter += 1;
             }
