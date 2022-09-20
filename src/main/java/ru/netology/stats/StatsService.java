@@ -54,8 +54,7 @@ public class StatsService {
 
     // 5.Кол-во месяцев, в которых продажи были ниже среднего
     public int counterMonthSalesMin(long[] sales) {
-        StatsService averag = new StatsService();
-        double average = averag.averageSumSales(sales);
+        double average = averageSumSales(sales);
 
         int counter = 0;
         for (int i = 0; i < sales.length; i++) {
@@ -69,8 +68,7 @@ public class StatsService {
 
     // 6.Кол-во месяцев, в которых продажи были выше среднего
     public int counterMonthSalesMax(long[] sales) {
-        StatsService averag = new StatsService();
-        double average = averag.averageSumSales(sales);
+        double average = averageSumSales(sales);
 
         int counter = 0;
         for (int i = 0; i < sales.length; i++) {
